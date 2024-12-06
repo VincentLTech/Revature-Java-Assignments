@@ -12,6 +12,8 @@ public class DoesNotContain {
         DoesNotContain doesNotContain = new DoesNotContain();
         int[] arr = {1, 2, 3, 4, 5};
         int target = 6;
+        int target2 = 3;
         System.out.println(doesNotContain.arrayDoesNotContain(arr, target)); // should print true, since 6 is not in the array.
+        System.out.println(doesNotContain.arrayDoesNotContain(arr, target2)); // should print false, since 3 is in the array.
     }
 }

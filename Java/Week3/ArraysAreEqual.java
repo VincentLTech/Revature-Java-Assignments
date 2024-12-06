@@ -24,6 +24,8 @@ public class ArraysAreEqual {
         ArraysAreEqual arraysAreEqual = new ArraysAreEqual();
         int[] array1 = {1, 2, 3, 4};
         int[] array2 = {1, 2, 3, 4};
+        int[] array3 = {1, 2, 3, 5};
         System.out.println(arraysAreEqual.equal(array1, array2)); // true
+        System.out.println(arraysAreEqual.equal(array1, array3)); // false
     }
 }
