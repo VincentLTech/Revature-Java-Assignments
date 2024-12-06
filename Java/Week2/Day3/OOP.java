@@ -1,4 +1,23 @@
-
+public class OOP{
+    public static void main(String[] args) {
+        Bird parrot = new Bird();
+        parrot.ageMonths = 2;
+        System.out.println(parrot.sound()); // prints: Chirp
+    }
+}
+class Bird {
+    public int ageMonths;
+    public Bird(){//I am making this default constructor visibale. 
+    }
+    public String sound(){//@return "Tweet" if ageMonths is less than 3 and "Chirp" if ageMonths is greater than or equal to 3.
+        if(ageMonths<3){
+            return "Tweet";
+        }
+        else{
+            return "Chirp";
+        }
+    }
+}
 /**
  * 
  * Problem:
@@ -27,26 +46,3 @@
  * 
  * 
  */
-public class Bird {
-    public int ageMonths;
-    public Bird(){//I am making this default constructor visibale. 
-    }
-    /**
-     * @return "Tweet" if ageMonths is less than 3 and "Chirp" if ageMonths is
-     *         greater than or equal to 3.
-     */
-    public String sound(){//@return "Tweet" if ageMonths is less than 3 and "Chirp" if ageMonths is greater than or equal to 3.
-        if(ageMonths<3){
-            return "Tweet";
-        }
-        else{
-            return "Chirp";
-        }
-    }
-    public static void main(String[] args) {
-        Bird parrot = new Bird();
-        parrot.ageMonths = 2;
-        System.out.println(parrot.sound()); // prints: Chirp
-    }
-
-}

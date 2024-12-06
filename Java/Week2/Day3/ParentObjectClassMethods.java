@@ -1,3 +1,33 @@
+public class ParentObjectClassMethods {
+    public int a;
+    public boolean b;
+
+    // public ParentObjectClassMethods(int a, boolean b) {
+    //     this.a = a;
+    //     this.b = b;
+    // }
+    public boolean equals(ParentObjectClassMethods other){
+        if(other.b==this.b && other.a==this.a){
+            return true;
+        }
+            return false;
+    }
+    //    implement a custom .equals(SampleClass other){} method here.
+
+    public String toString(){
+        
+        return " "+a+" "+b;
+    }
+    //    implement a custom .toString(){} method here.
+    
+    public static void main(String[] args) {
+        ParentObjectClassMethods iem1 = new ParentObjectClassMethods();
+        iem1.a = 1;
+        iem1.b = true;
+        System.out.println(iem1.toString()); 
+    }
+}
+
 /**
  * Your goal for this activity is to provide an overriden implementation of the 'equals' method and the 'toString'
  * method. Please note that these methods are automatically inherited by all classes in Java from the Object class.
@@ -58,32 +88,3 @@
  * In the future (or if you get stuck), IDE's are generally capable of automatically generating boilerplate code
  * like toString, equals, constructors, getters, setters, if you can find the menu to do so.
  */
-public class ParentObjectClassMethods {
-    public int a;
-    public boolean b;
-
-    // public ParentObjectClassMethods(int a, boolean b) {
-    //     this.a = a;
-    //     this.b = b;
-    // }
-    public boolean equals(ParentObjectClassMethods other){
-        if(other.b==this.b && other.a==this.a){
-            return true;
-        }
-            return false;
-    }
-    //    implement a custom .equals(SampleClass other){} method here.
-
-    public String toString(){
-        
-        return " "+a+" "+b;
-    }
-    //    implement a custom .toString(){} method here.
-    
-    public static void main(String[] args) {
-        ParentObjectClassMethods iem1 = new ParentObjectClassMethods();
-        iem1.a = 1;
-        iem1.b = true;
-        System.out.println(iem1.toString()); 
-    }
-}
