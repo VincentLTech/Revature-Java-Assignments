@@ -26,10 +26,10 @@ public class Boolean {
         boolean b1 =true;
         boolean b2 =false;
 
-        returnBoolean(b);
-        returnNot(b);
-        returnAnd(b1, b2);
-        returnOr(b1, b2);
+        System.out.println(returnBoolean(b));//true
+        System.out.println(returnNot(b));//false
+        System.out.println(returnAnd(b1, b2));//false
+        System.out.println(returnOr(b1, b2));//true
     }
 
 }

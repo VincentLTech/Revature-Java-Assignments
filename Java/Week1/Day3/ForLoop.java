@@ -47,4 +47,8 @@ class ForLoop {
         }  
         return buildingString;
     }
+    public static void main(String[] args) {
+        ForLoop loop = new ForLoop();
+        System.out.println(loop.returnNumbers(0, 8));
+    }
 }

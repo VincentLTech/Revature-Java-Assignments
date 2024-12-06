@@ -1,5 +1,4 @@
-public class StaticKeyword {
-    /**
+/**
      * This challenge is about interacting with static variables.
      *
      * Your task is simply to change the variable global_var from Class to the value of 'in' given in the parameters.
@@ -20,7 +19,16 @@ public class StaticKeyword {
      *
      * @param in the String value you should change global_var to in.
      */
+class Class {
+    static String global_var = "this variable is static";
+}
+public class StaticKeyword {
     public void changeClassVar(String in){
-        // StaticKeyword.global_var= in;
+        Class.global_var= in;
+    }
+    public static void main(String[] args) {
+        StaticKeyword obj = new StaticKeyword();
+        obj.changeClassVar("new value");
+        System.out.println(Class.global_var); // should print: new value
     }
 }

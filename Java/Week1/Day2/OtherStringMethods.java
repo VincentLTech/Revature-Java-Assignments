@@ -1,3 +1,4 @@
+import java.util.Arrays;
 /**
  * Official String documentation: https://docs.oracle.com/javase/7/docs/api/java/lang/String.html
  */
@@ -41,5 +42,11 @@ public class OtherStringMethods {
      */
     public String[] splitStringIntoMultipleStrings(String s1, String splitAround) {
         return  s1.split(splitAround);
+    }
+    public static void main(String[] args) {
+        OtherStringMethods otherStringMethods = new OtherStringMethods();
+        System.out.println(otherStringMethods.partOfString("banana", 0, 3));
+        System.out.println(otherStringMethods.compareLexigraphically("cat", "dog"));
+        System.out.println(Arrays.toString(otherStringMethods.splitStringIntoMultipleStrings("my favorite sentence", " ")));
     }
 }

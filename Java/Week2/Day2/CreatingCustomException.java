@@ -1,5 +1,5 @@
 
-public class ThrowCustomException {
+public class CreatingCustomException {
 
     /**
      * This method should throw a CustomException. CustomException is a custom exception that we've written ourselves
@@ -19,4 +19,6 @@ public class ThrowCustomException {
         throw new CustomException();
     }
 
+}
+class CustomException extends Exception{
 }

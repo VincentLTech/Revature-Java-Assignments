@@ -1,15 +1,6 @@
 
 public class GreaterOrLesser {
-    /**
-     * Let's say part of a calculator app has to judge whether one number is bigger than another. This problem will
-     * require you to use an if/else statement.
-     *
-     * @param a first number to be compared.
-     * @param b second number to be compared.
-     * @return  If a is less than b, return the string "Lesser". if a is greater than b, return "Greater".
-     *          If neither is true, return "Equal". This problem is case-sensitive!
-     */
-    public String decide(int a, int b){
+    public String decide(int a, int b){//@return  If a is less than b, return the string "Lesser". if a is greater than b, return "Greater". neither is true, return "Equal". This problem is case-sensitive!
         if(a>b){
             return "Greater";
         }
@@ -19,6 +10,11 @@ public class GreaterOrLesser {
         else{
             return "Equal";
         }
-        
+    }
+    public static void main(String[] args) {
+        GreaterOrLesser gol = new GreaterOrLesser();
+        System.out.println(gol.decide(5, 3));
+        System.out.println(gol.decide(3, 5));
+        System.out.println(gol.decide(3, 3));
     }
 }

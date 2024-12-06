@@ -1,12 +1,5 @@
 public class GetMax {
-    /**
-     * This method should return the max value of arr (the largest int.)
-     * This problem will require you to use a for loop. No other guidance will be provided.
-     *
-     * @param arr an array of ints to be manipulated.
-     * @return the largest value in arr.
-     */
-    public int max(int[] arr){
+    public int max(int[] arr){//@return the largest value in arr.
         int her = -1000000000;
         for(int i=0; i<arr.length;i++){
             if(arr[i]>her){
@@ -14,5 +7,11 @@ public class GetMax {
             }
         }
         return her;
+    }
+    
+    public static void main(String[] args) {
+        GetMax getMax = new GetMax();
+        int[] arr = {10, 5, 15, 20, 100};
+        System.out.println("The largest value in the array is: " + getMax.max(arr));
     }
 }

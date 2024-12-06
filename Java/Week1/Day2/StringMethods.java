@@ -28,5 +28,17 @@ public class StringMethods {
     public int getIndexGivenCharacter(String s, char c){
         return s.indexOf(c);
     }
-
+    public static void main(String[] args) {
+        StringMethods stringMethods = new StringMethods();
+        String s = "banana";
+        System.out.println("Length of String: " + stringMethods.getStringLength(s));
+        System.out.println("Character at index 1: " + stringMethods.getCharacterAtIndex(s, 1));
+        System.out.println("Index of character 'a': " + stringMethods.getIndexGivenCharacter(s, 'a'));
+        String e = "";
+        // Test with empty string
+        System.out.println("Length of empty String: " + stringMethods.getStringLength(e));
+        // System.out.println("Character at index 0 (empty string): " + stringMethods.getCharacterAtIndex(e, 0));
+        System.out.println("Index of character 'a' in empty string: " + stringMethods.getIndexGivenCharacter(e, 'a'));
+        
+    }
 }

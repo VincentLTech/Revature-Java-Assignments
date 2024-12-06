@@ -1,5 +1,3 @@
-
-public class IfStatement {
     /**
      * An if statement uses a conditional statement (within parentheses) to determine if the code
      * within {curly braces} should run.
@@ -13,53 +11,20 @@ public class IfStatement {
      * This means that you can use the variables bool, x, and y freely, within the if statement, to solve the problem.
      *
      * Additional Resource if needed: https://www.w3schools.com/java/java_conditions.asp
-     *
-     * @param bool a true/false value that determines if x or y is to be returned.
-     * @param x first number to be compared.
-     * @param y second number to be compared.
-     * @return x if bool is true. if bool is false, return y.
      */
-    public static int ifExample(boolean bool, int x, int y){
-        if(bool==true){
-            return x;
-        }
-        else if(bool==false){
-            return y;
-        }
+public class IfStatement {
+    public static int ifExample(boolean bool, int x, int y){//@return x if bool is true. if bool is false, return y.
+        if(bool==true){return x;}
+        else if(bool==false){return y;}
         return 0;
     }
-    /**
-     * This method should return the parameter `x` if the parameter `bool` is true,
-     * otherwise return the parameter `y`.
-     * 
-     * Using the paremeters `bool`, `x`, and `y`, to return the correct value.
-     *
-     * @param bool - a true or false value.
-     * @param x    - first number to be compared.
-     * @param y    - second number to be compared.
-     * @return - x if bool is true, otherwise return y.
-     */
-    public static int exercise1(boolean bool, int x, int y) {
-        if(bool==true){
-            return x;
-        }
-        else{
-            return y;
-        }
+    public static int exercise1(boolean bool, int x, int y) {//@return - x if bool is true, otherwise return y.
+        if(bool==true){return x;}
+        else{return y;}
     }
-
-    /**
-     * This method should return "Positive" if the parameter `x` is a positive number, "Negative" if the parameter `x` is a negative number, or "Zero" if the parameter `x` is zero.
-     *  
-     * @param x - a number that could be positive, negative, or zero.
-     * @return - "Positive", "Negative", or "Zero" depending on the input.
-     */
-    public static String exercise2(int x) {
-        if(x>0){
-            return "Positive";
-        } else if(x<0){
-            return "Negative";
-        }
+    public static String exercise2(int x) {//@return - "Positive", "Negative", or "Zero" depending on the input.
+        if(x>0){return "Positive"; } 
+        else if(x<0){return "Negative";}
         return "Zero";
     }
 
@@ -78,16 +43,10 @@ public class IfStatement {
      * @return - "Yes", "No", or "Not quite!" depending on the input. 
      */
     public static String exercise3(int year) {
-        if(year%4!=0){
-            return "No";
-        }else{
-            if(year%100==0 && year%400!=0){
-                return "Not quite";
-                
-            }
-            else if(year%400==0){
-                return "Yes";
-            }
+        if(year%4!=0){return "No";}
+        else{
+            if(year%100==0 && year%400!=0){return "Not quite";}
+            else if(year%400==0){return "Yes";}
         }
         return "Yes";
     }

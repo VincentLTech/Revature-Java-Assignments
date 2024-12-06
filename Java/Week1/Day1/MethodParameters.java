@@ -27,4 +27,11 @@ public class MethodParameters{
     public String copy(String text){
         return text;
     }
+    public static void main(String[] args) {
+        MethodParameters mp = new MethodParameters();
+        String str = mp.copy("hello");
+        System.out.println(str);
+        String str2 = mp.copy("hello2");
+        System.out.println(str2);
+    }
 }
