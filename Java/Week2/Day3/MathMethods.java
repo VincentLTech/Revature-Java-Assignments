@@ -1,6 +1,4 @@
-import java.util.*;
-public class MathMethods {
-    /**
+/**
      * The Math class contains utility methods that can be used for calculations like exponents, rounding, random
      * number generation, etc. The point of this challenge, however, is not strictly to use the Math class - there are
      * many "Utility Classes" while follow a curious pattern - where we usually instantiate an object before using it,
@@ -19,7 +17,15 @@ public class MathMethods {
      *
      * @return return a^b using the pow() method of the Math class.
      */
-    public double mathPow(double a, double b){
+// import java.util.*;
+// import java.util.Math;
+public class MathMethods {
+    
+    public static double mathPow(double a, double b){
         return Math.pow(a,b);
     }
+    public static void main(String[] args) {
+        System.out.println(mathPow(2, 3));
+    }
+
 }

@@ -18,7 +18,7 @@ public class Instantiation {
      * @return any object.
      */
     public Object instantiateANewObject(){
-        Lab reference = new Lab();
+        Instantiation reference = new Instantiation();
         return reference;
     }
 }

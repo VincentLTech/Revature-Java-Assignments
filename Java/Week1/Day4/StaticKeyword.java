@@ -21,6 +21,6 @@ public class StaticKeyword {
      * @param in the String value you should change global_var to in.
      */
     public void changeClassVar(String in){
-        Class.global_var= in;
+        // StaticKeyword.global_var= in;
     }
 }

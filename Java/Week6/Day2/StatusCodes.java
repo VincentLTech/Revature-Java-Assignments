@@ -2,7 +2,7 @@
 
 import io.javalin.Javalin;
 
-public class JavalinSingleton {
+public class StatusCodes {
     /**
      * Assignment: return the status code for a generic "client side error" in the http response
      *

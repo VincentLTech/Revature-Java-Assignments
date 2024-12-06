@@ -61,6 +61,11 @@
 public class ParentObjectClassMethods {
     public int a;
     public boolean b;
+
+    // public ParentObjectClassMethods(int a, boolean b) {
+    //     this.a = a;
+    //     this.b = b;
+    // }
     public boolean equals(ParentObjectClassMethods other){
         if(other.b==this.b && other.a==this.a){
             return true;
@@ -74,4 +79,11 @@ public class ParentObjectClassMethods {
         return " "+a+" "+b;
     }
     //    implement a custom .toString(){} method here.
+    
+    public static void main(String[] args) {
+        ParentObjectClassMethods iem1 = new ParentObjectClassMethods();
+        iem1.a = 1;
+        iem1.b = true;
+        System.out.println(iem1.toString()); 
+    }
 }

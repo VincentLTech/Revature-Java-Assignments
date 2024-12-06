@@ -56,7 +56,7 @@
  * @param <T> the Object that the class that implements this interface will be compared to (usually we write
  *           the class's own name, as we typically compare objects to other objects of the same type.)
  */
-public interface Comparable<T> {
+interface Comparable<T> {
 
     int compareTo(T data);
 

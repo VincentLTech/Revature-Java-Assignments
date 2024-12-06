@@ -51,5 +51,10 @@ public class Bird {
             return "Chirp";
         }
     }
+    public static void main(String[] args) {
+        Bird parrot = new Bird();
+        parrot.ageMonths = 2;
+        System.out.println(parrot.sound()); // prints: Chirp
+    }
 
 }

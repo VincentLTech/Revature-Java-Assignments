@@ -19,4 +19,17 @@ public class CastingPrimitive {
         int value = (int)d;
         return value;
     }
+    public static int castToInt2(double d){
+        int value = (int)d;
+        return value;
+    }
+    public static void main(String[] args) {
+        CastingPrimitive castingPrimitive = new CastingPrimitive();
+        System.out.println(castingPrimitive.castToInt(3.9)); //prints 3
+        System.out.println(castToInt2(3.9));
+        System.out.println((int)3.14);
+        System.out.println((double)3);
+
+    }
+    
 }
