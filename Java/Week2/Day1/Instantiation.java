@@ -21,4 +21,10 @@ public class Instantiation {
         Instantiation reference = new Instantiation();
         return reference;
     }
+    
+    public static void main(String[] args) {
+        Instantiation obj = new Instantiation();
+        System.out.println(obj.instantiateANewObject());
+        // This will print: Instantiation@7852e922
+    }
 }

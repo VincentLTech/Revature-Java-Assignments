@@ -15,23 +15,11 @@
      * }
      * return str;
      *
-     * Where i represents a variable that is used to visit every number between 0 and the length of nums. Inside of the
-     * for loop, you will need to write code that appends elements from nums to str, one by one, in the format described
-     * above.
-     *
-     * After completing the problem, I recommend using your IDE's debugger to walk through the loop. The debugger will
-     * allow you to step through the code and help you visualize the values as they change over time. We recommend that
-     * you review the Visual Studio Code Debugging documentation: https://code.visualstudio.com/Docs/editor/debugging
-     * to get a better understanding of how to use these tools. Debugging is an important process and is critical for 
-     * your success in future coding challenges and as a developer.
-     *
-     * @param nums the array to be manipulated.
-     * @return a string representation of all values of nums, with the values separated by spaces.
      */
     
 
 // import java.util.Arrays;
-public class ReturnArrayContents {
+public class ReturnArrayContents {//@return a string representation of all values of nums, with the values separated by spaces.
     
     public String arrayToString(int[] nums){
         String result = "";
@@ -39,5 +27,10 @@ public class ReturnArrayContents {
             result= result+" "+ nums[i];
         }
         return result;
+    }
+    public static void main(String[] args) {
+        int[] arr = {3, 4, 5, 6};
+        ReturnArrayContents obj = new ReturnArrayContents();
+        System.out.println(obj.arrayToString(arr)); // Output: 3 4 5 6
     }
 }

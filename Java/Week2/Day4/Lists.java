@@ -1,4 +1,3 @@
-import java.util.*;
 
 /**
  * Lists are ordered collections. This means that we could access elements at a certain position of a list,
@@ -7,6 +6,7 @@ import java.util.*;
  * We will be using lists quite a bit to store values. They will be the most common Collection we use, and you will
  * become familiar with them over time.
  */
+import java.util.*;
 public class Lists {
     /**
      * Instantiate and return a List of Integers.
@@ -21,33 +21,16 @@ public class Lists {
      * the Object form of a primitive.
      *
      * A popular implementation of List is ArrayList. Look up how to instantiate one.
-     *
-     * @return a List<Integer> object.
      */
-    public List<Integer> createList(){
-        List<Integer> list = new ArrayList<Integer>(5);
+    public List<Integer> createList(){//Instantiate and return a List of Integers, returning a List<Integer> object.
+        List<Integer> list = new ArrayList<Integer>(6);
         return list;
     }
-    /**
-     * Get the size of a list.
-     *
-     * @param list a List<Integer> object.
-     * @return the size of List (number of items it holds.)
-     */
-    public int getSize(List<Integer> list){
-
+    public int getSize(List<Integer> list){//Get the size of a list.
         return list.size();
     }
 
-    /**
-     * Add an item to a list.
-     * When we add a value to a list, it gets appended to the end.
-     *
-     * @param list a List<Integer> object that we would like to modify.
-     * @param value an integer that we would like to add to list.
-     * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
-     */
-    public void addToList(List<Integer> list, int value){
+    public void addToList(List<Integer> list, int value){//Add an item to a list.
         list.add(value);
     }
 
@@ -65,33 +48,28 @@ public class Lists {
      * @param index represents the index of the element we would like to retrieve.
      * @return the int value at the location in 'list' represented by 'index'.
      */
-    public int get(List<Integer> list, int index){
+    public int get(List<Integer> list, int index){//Get a particular index of a list.
         return list.get(index);
     }
-
-    /**
-     * Remove an index from a list.
-     * We can remove an item from the list, which will cause all items after it to reduce their index by 1 (they are
-     * all still ordered, without any empty spaces in the list.)
-     *
-     * @param list a List<Integer> object that we would like to modify.
-     * @param position represents the index of the element we would like to remove.
-     * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
-     */
-    public void removeFromList(List<Integer> list, int position){
+    public void removeFromList(List<Integer> list, int position){//Remove an index from a list.
         list.remove(position);
     }
-
-    /**
-     * Update an index of a list.
-     * We can update a value in the list, which will overwrite a value at a certain position.
-     *
-     * @param list a List<Integer> object that we would like to modify.
-     * @param position represents the index of the element we would like to change.
-     * @param value the new value which we would like to assign to the item at position in list
-     * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
-     */
-    public void updateAtPosition(List<Integer> list, int position, int value){
+    public void updateAtPosition(List<Integer> list, int position, int value){//Update an index of a list.
         list.set(position,value);
+    }
+    public static void main(String[] args) {
+        Lists list = new Lists();
+        List<Integer> myList = list.createList();
+        list.addToList(myList, 1);
+        list.addToList(myList, 2);
+        list.addToList(myList, 3);
+        list.addToList(myList, 4);
+        list.addToList(myList, 5);
+        System.out.println("Size: " + list.getSize(myList));
+        System.out.println("Index 2: " + list.get(myList, 2));
+        list.updateAtPosition(myList, 2, 6);
+        System.out.println("Index 2 after update: " + list.get(myList, 2));
+        list.removeFromList(myList, 2);
+        System.out.println("Size after removal: " + list.getSize(myList));
     }
 }

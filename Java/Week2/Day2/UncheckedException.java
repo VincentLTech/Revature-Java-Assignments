@@ -17,4 +17,9 @@ public class UncheckedException {
         System.out.println(num[5]);//literally create a method that is completely impossible
 
     }
+    public static void main(String[] args) {
+        UncheckedException u = new UncheckedException();
+        u.throwUncheckedException();
+        // This will not compile because throwUncheckedException is not declared as a method in UncheckedException class.
+    }
 }

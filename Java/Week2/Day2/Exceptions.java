@@ -1,5 +1,4 @@
-public class Exceptions{
-    /**
+/**
      * An exception is an unexpected event that occurs during our program.
      * Most likely, you have already encountered an Exception (ArrayIndexOutOfBounds, etc).
      * In order for our program to compile, Java needs to be prepared for how to handle an exception -
@@ -18,7 +17,17 @@ public class Exceptions{
      * This also means that you should NOT write a try/catch block in this method, as the tests are expecting to have
      * a method thrown to it. A try/catch block would handle the exception within the method.
      */
+public class Exceptions{
+    
     public void mustThrow() throws Exception {
         throw new Exception("it does not work");
+    }
+    public static void main(String[] args) {
+        Exceptions e = new Exceptions();
+        try {
+            e.mustThrow();
+        } catch (Exception ex) {
+            System.out.println("Caught exception: " + ex.getMessage());
+        }
     }
 }

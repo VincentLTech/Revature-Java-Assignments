@@ -37,6 +37,13 @@
             return 0;
         }
     }
+    public static void main(String[] args) {
+        Interfaces obj1 = new Interfaces();
+        Interfaces obj2 = new Interfaces();
+        obj1.val = 10;
+        obj2.val = 10;
+        System.out.println(obj1.compareTo(obj2)); // Output: 0
+    }
 
 }
 

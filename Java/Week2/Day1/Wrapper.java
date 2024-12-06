@@ -13,21 +13,21 @@ public class Wrapper {
 }
 
 
-// class Autoboxing{
-// 	public static void main(String[] args){
-// 		char ch = 'a';
-// 		// Autoboxing- primitive to Character object conversion
-// 		Character a = ch;
-//         System.out.println(a);
-// 		ArrayList<Integer> arrayList = new ArrayList<Integer>();
+class Autoboxing{
+	public static void main(String[] args){
+		char ch = 'a';
+		// Autoboxing- primitive to Character object conversion
+		Character a = ch;
+        System.out.println(a);
+		ArrayList<Integer> arrayList = new ArrayList<Integer>();
 
-// 		// Here, autoboxing of the int 25 takes place because arrayList only stores Integer objects.
-// 		arrayList.add(25);
+		// Here, autoboxing of the int 25 takes place because arrayList only stores Integer objects.
+		arrayList.add(25);
 
-// 		// printing the values from object
-// 		System.out.println(arrayList.get(0));
-// 	}
-// }
+		// printing the values from object
+		System.out.println(arrayList.get(0));
+	}
+}
 
 class Unboxing2{
 	public static void main(String[] args){
