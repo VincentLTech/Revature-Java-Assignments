@@ -1,5 +1,5 @@
 
-public class RemoveAllCharacter {
+public class RemoveAllCharacters {
     /**
      * Return a String that has all the character of a String removed.
      * You could either use a for loop to build a new String that excludes a character, or you could cleverly use

@@ -8,7 +8,7 @@ import java.util.Set;
  *
  * You can find more information about HashSet, a common and very efficient implementation of Set, by searching online.
  */
-public class Lab {
+public class Sets {
     /**
      * Instantiate and return a Set of Integers.
      *

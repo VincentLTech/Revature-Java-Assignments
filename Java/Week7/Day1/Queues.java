@@ -29,7 +29,7 @@ import java.util.Queue;
  * to handle multiple 'priorities' of items.
  */
 
-public class Lab {
+public class Queues{
     /**
      * Instantiate and return some type of Deque, which is a class that contains Queue and Stack functionality.
      * @return an instantiated Deque. Queue, by itself, doesn't have a class, so you should use a class that

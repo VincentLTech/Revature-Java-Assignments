@@ -11,7 +11,7 @@ import java.util.Map;
  *
  * Keys may not be duplicates, but there may be duplicate values in a map.
  */
-public class Lab {
+public class Maps {
 
     /**
      * Create and instantiate a collection that implements that Map interface, like
