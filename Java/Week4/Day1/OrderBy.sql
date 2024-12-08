@@ -1,10 +1,23 @@
+/**
+     *
+     *      character table
+     *      | id |  first_name  |  last_name  |
+     *      -----------------------------------
+     *      |1   |'Leto'        |'Atreides'   |
+     *      |2   |'Vladimir'    |'Harkonnen'  |
+     *      |3   |'Jessica'     |'Atreides'   |
+     *      |4   |'Paul'        |'Atreides'   |
+     *      |5   |'Feyd-Rautha' |'Harkonnen'  |
+     *
+     */
+/**
+         * Problem 1: Write a statement below to query the database for all characters. Make sure the results are in
+         * ascending order by last name, and first name as a tie-breaker.
+         */
+SELECT id, first_name, last_name
+FROM character
+ORDER BY last_name, first_name ASC;
 
-import Util.ConnectionUtil;
-import Util.FileUtil;
-
-import java.sql.*;
-import java.util.LinkedList;
-import java.util.List;
 
 /**
  * SQL sublanguage: DQL (Data Query Language)
@@ -26,7 +39,6 @@ import java.util.List;
  *
  *      SELECT * FROM employee WHERE current = true ORDER BY salary DESC
  */
-public class OrderResultSetActivity {
     /**
      *
      *      character table
@@ -40,30 +52,7 @@ public class OrderResultSetActivity {
      *
      */
 
-    public List<Character> problem1() {
         /**
          * Problem 1: Write a statement below to query the database for all characters. Make sure the results are in
          * ascending order by last name, and first name as a tie-breaker.
          */
-        String sql = FileUtil.parseSQLFile("problem1.sql");
-
-
-
-        List<Character> resultList = new LinkedList<>();
-        try {
-            Connection connection = ConnectionUtil.getConnection();
-            Statement s = connection.createStatement();
-            ResultSet rs =s.executeQuery(sql);
-
-            while(rs.next()) {
-                resultList.add(new Character(rs.getInt(1), rs.getString(2), rs.getString(3)));
-            }
-
-        } catch (SQLException e) {
-            System.out.println("problem1: " + e.getMessage() + '\n');
-        }
-
-        return resultList;
-    }
-
-}

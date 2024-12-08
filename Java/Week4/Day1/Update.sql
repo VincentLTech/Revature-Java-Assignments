@@ -1,9 +1,6 @@
-import Util.ConnectionUtil;
-import Util.FileUtil;
-
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.sql.Statement;
+UPDATE site_user
+SET lastname = 'Rush'
+WHERE firstname = 'Alexa';
 
 /**
  * SQL sublanguage: DML (Data Manipulation Language)
@@ -15,7 +12,6 @@ import java.sql.Statement;
  *
  * NOTE: The WHERE condition is important because if you leave this out, that column will be updated throughout all the records in the table.
  */
-public class UpdateARecord {
 
     /**
      *  site_user table:
@@ -27,24 +23,3 @@ public class UpdateARecord {
      *  |4      |'Brandon'             |'Smith'                 |
      *  |5      |'Adam'                |'Jones'                 |
      */
-
-
-    public void problem1(){
-        /**
-         * Problem 1: Update Alexa's last name to be 'Rush' in the site_user table.
-         */
-        String sql = FileUtil.parseSQLFile("problem1.sql");
-
-        try {
-            Connection connection = ConnectionUtil.getConnection();
-            Statement s = connection.createStatement();
-            s.executeUpdate(sql);
-
-        } catch (SQLException e) {
-            System.out.println("problem1: " + e.getMessage() + '\n');
-        }
-    }
-}
-UPDATE site_user
-SET lastname = 'Rush'
-WHERE firstname = 'Alexa';

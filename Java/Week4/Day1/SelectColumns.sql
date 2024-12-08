@@ -1,10 +1,4 @@
-import Util.ConnectionUtil;
-import Util.FileUtil;
-
-import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
-
+select firstname from site_user;
 /**
  * SQL sublanguage: DQL (Data Query Language)
  *
@@ -19,7 +13,7 @@ import java.util.List;
  * However, we can specify the columns that we want to display by the following syntax:
  * SELECT col_1, col_2, ...col_N FROM table_name;
  */
-public class FilterColumns {
+
 
     /**
      * problem 1: Write the SQL statement in the problem1.sql file to return only the 'firstname' column from the
@@ -34,24 +28,3 @@ public class FilterColumns {
      *      |4      |'Brandon'             |'Smith'                 |
      *      |5      |'Adam'                |'Jones'                 |
      */
-
-    public List<User> problem1(){
-        String sql = FileUtil.parseSQLFile("problem1.sql");
-
-        List<User> users = new ArrayList<>();
-        try {
-            Connection connection = ConnectionUtil.getConnection();
-            Statement s = connection.createStatement();
-            ResultSet rs =s.executeQuery(sql);
-            while(rs.next()){
-                users.add(new User(0, rs.getString(1), null));
-            }
-        } catch (SQLException e) {
-            System.out.println("problem1: " + e.getMessage() + '\n');
-        }
-
-        return users;
-    }
-
-}
-

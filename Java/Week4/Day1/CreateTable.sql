@@ -1,10 +1,11 @@
-import Util.ConnectionUtil;
-import Util.FileUtil;
+CREATE TABLE song (title VARCHAR(100), artist VARCHAR(100));
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Statement;
+-- INSERT INTO song (Title, Artist)
+-- VALUES ('Let it be','Beatles'),
+-- ('Hotel California','Eagles'),
+-- ('Kashmir','Led Zeppelin');
+
+
 
 /**
  * SQL sublanguage: DDL (Data Definition Language)
@@ -43,7 +44,6 @@ import java.sql.Statement;
  *          - UNIQUE: every record in a specific column must have a unique value
  *      - If a constraint that was defined is not met when inserting a record, a SQLException will be thrown.
  */
-public class CreateATable {
 
     /**
      * Assignment: Create a new table in the problem1.sql file, called "song" with 2 columns "title" and "artist".
@@ -59,17 +59,3 @@ public class CreateATable {
      *     Do not change anything in this code. You should write your sql statement on a single line in the
      *     problem1.sql file.
      */
-    public void problem1(){
-//        write your SQL logic in a single line in the problem1.sql file.
-        String sql = FileUtil.parseSQLFile("problem1.sql");
-
-        try {
-            Connection connection = ConnectionUtil.getConnection();
-            Statement s = connection.createStatement();
-            s.executeUpdate(sql);
-        } catch (SQLException e) {
-            System.out.println("problem1: " + e.getMessage() + '\n');
-        }
-    }
-
-}

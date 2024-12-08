@@ -1,9 +1,12 @@
-import Util.ConnectionUtil;
-import Util.FileUtil;
+ALTER TABLE site_user ADD lastname Varchar(100);
+-- INSERT INTO site_user (firstname)
+-- VALUES ('Kevin'),
+-- ('Brian'),
+-- ('Charles');
 
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.sql.Statement;
+
+
+
 
 /**
  * SQL sublanguage: DDL (Data Definition Language)
@@ -32,7 +35,6 @@ import java.sql.Statement;
  *
  *     NOTE: the [] in the "Adding a column" syntax means that the constraint is option
  */
-public class AlterATable {
 
     /**
      *
@@ -47,17 +49,3 @@ public class AlterATable {
      *   |3         |'Charles'          |
      *
      */
-    public void problem1(){
-        String sql = FileUtil.parseSQLFile("problem1.sql");
-
-        try {
-            Connection connection = ConnectionUtil.getConnection();
-            Statement s = connection.createStatement();
-            s.executeUpdate(sql);
-
-        } catch (SQLException e) {
-            System.out.println("problem1: " + e.getMessage() + '\n');
-        }
-    }
-}
-

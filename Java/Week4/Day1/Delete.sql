@@ -1,11 +1,5 @@
-
-import Util.ConnectionUtil;
-import Util.FileUtil;
-
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.sql.Statement;
-
+DELETE FROM site_user 
+WHERE firstname = 'Steve';
 /**
  * SQL sublanguage: DML (Data Manipulation Language)
  *
@@ -17,7 +11,6 @@ import java.sql.Statement;
  * NOTE: Whenever you execute a DELETE statement, have a WHERE condition that identifies exactly what records you would
  * like to delete. Leaving this out will remove ALL records from the table.
  */
-public class DeleteRecords {
 
     /**
      * Assignment: In the problem1.sql, write the SQL command to delete 'Steve' from the site_user table, assuming
@@ -32,18 +25,3 @@ public class DeleteRecords {
      *        |4      |'Brandon'             |
      *        |5      |'Adam'                |
      */
-    public void problem1(){
-
-        String sql = FileUtil.parseSQLFile("problem1.sql");
-
-        try {
-            Connection connection = ConnectionUtil.getConnection();
-            Statement s = connection.createStatement();
-            s.executeUpdate(sql);
-
-        } catch (SQLException e) {
-            System.out.println("problem1: " + e.getMessage() + '\n');
-        }
-    }
-}   
-

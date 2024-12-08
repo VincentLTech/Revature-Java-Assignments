@@ -1,11 +1,9 @@
+CREATE TABLE song(
+    id SERIAL PRIMARY KEY,
+    title varchar(100),
+    artist varchar(100)
+);
 
-import Util.ConnectionUtil;
-import Util.FileUtil;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Statement;
 
 /**
  * SQL sublanguage: DDL (Data Definition Language)
@@ -38,7 +36,6 @@ import java.sql.Statement;
  *      The datatype "SERIAL" is an int that will autogenerate a unique number for us.
  *      The constraint "PRIMARY KEY" identifies the id column as the primary key column.
  */
-public class CreateTableWithPK {
 
     /**
      *      song table
@@ -48,27 +45,9 @@ public class CreateTableWithPK {
      *      |2      |'Hotel California' |'Eagles'               |
      *      |3      |'Kashmir'          |'Led Zeppelin'         |
      */
-    public void problem1(){
 
         /**
          * Assignment: create a table in problem1.sql called "song" that has 3 columns listed above
          *
          * NOTE: The "id" column is what we are going to define as the primary key.
          */
-        String sql = FileUtil.parseSQLFile("problem1.sql");
-
-        try {
-            Connection connection = ConnectionUtil.getConnection();
-            Statement s = connection.createStatement();
-            s.executeUpdate(sql);
-        } catch (SQLException e) {
-            System.out.println("problem1: " + e.getMessage() + '\n');
-        }
-    }
-}
-
-// CREATE TABLE song(
-//     id SERIAL PRIMARY KEY,
-//     title varchar(100),
-//     artist varchar(100)
-// );

@@ -1,9 +1,28 @@
-import Util.ConnectionUtil;
-import Util.FileUtil;
+-- Problem 1
 
-import java.sql.*;
-import java.util.HashMap;
-import java.util.Map;
+-- song table
+-- | id |     artist     |        album        |         song         |
+-- |----|----------------|---------------------|----------------------|
+-- |1   |'The Beatles'   |'Abbey Road'         |'Come Together'       |
+-- |2   |'The Beatles'   |'Let It Be'          |'Let It Be'           |
+-- |3   |'Led Zeppelin'  |'IV'                 |'Black Dog'           |
+-- |4   |'Led Zeppelin'  |'Physical Graffiti'  |'Kashmir'             |
+-- |5   |'Led Zeppelin'  |'IV'                 |'Going to California' |
+-- |6   |'The Eagles'    |'Hotel California'   |'Hotel California'    |
+
+-- Problem 1: Use the `GROUP BY` clause with the `COUNT()` aggregate function to query the song table for the 
+-- number of songs by each artist. The result of the query should have two columns: the artist, and the count(song) of the artist.
+-- HINT: You should avoid using the wild card (*) in your statement. All projected columns must either be used in the `GROUP BY` clause or an aggregate function.
+
+-- Write your sql statement anywhere below this line
+
+-- SELECT artist, COUNT(artist) AS artist_count FROM song GROUP BY artist;
+SELECT artist, COUNT(song)
+FROM song
+GROUP BY artist; 
+
+
+
 
 /**
  * SQL sublanguage: DQL (Data Query Language)
@@ -54,22 +73,3 @@ public class GroupByActivity {
          * HINT: You should avoid using the wild card (*) in your statement. All projected columns must either be used
          * in the GROUP BY clause or an aggregate function.
          */
-        String sql = FileUtil.parseSQLFile("problem1.sql");
-
-        Map<String, Integer> counts = new HashMap<>();
-        try {
-            Connection connection = ConnectionUtil.getConnection();
-            Statement s = connection.createStatement();
-            ResultSet rs =s.executeQuery(sql);
-
-            while(rs.next()) {
-                counts.put(rs.getString("artist"), rs.getInt("COUNT(song)"));
-            }
-        } catch (SQLException e) {
-            System.out.println("problem1: " + e.getMessage() + '\n');
-        }
-
-        return counts;
-    }
-
-}

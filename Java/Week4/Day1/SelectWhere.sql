@@ -1,9 +1,10 @@
-import Util.ConnectionUtil;
-import Util.FileUtil;
+select id, first_name, last_name, salary 
+from employee 
+where last_name = 'Smith';
 
-import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
+select id, first_name, last_name, salary 
+from employee 
+where salary > 75000.00;
 
 /**
  * SQL sublanguage: DQL (Data Query Language)
@@ -41,7 +42,6 @@ import java.util.List;
  * This will return all the records with a salary value of less than $100,000.00
  *      SELECT * FROM employees WHERE salary < 100000.00
  */
-public class FilterRecords {
 
     /**
      * Problem 1: Given the employee table, write a query in the problem1.sql file to retrieve all the records
@@ -57,31 +57,7 @@ public class FilterRecords {
      *   |5     |'Adam'          |'Jones'        |55050.50  |
      */
 
-
-    public List<User> problem1(){
-        /**
-         *
-         */
-        String sql = FileUtil.parseSQLFile("problem1.sql");
-
-
-        List<User> users = new ArrayList<>();
-        try {
-            Connection connection = ConnectionUtil.getConnection();
-            Statement s = connection.createStatement();
-            ResultSet rs =s.executeQuery(sql);
-
-            while(rs.next()){
-                users.add(new User(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getDouble(4)));
-            }
-
-        } catch (SQLException e) {
-            System.out.println("problem1: " + e.getMessage() + '\n');
-        }
-
-        return users;
-    }
-    /**
+         /**
      * Problem 2: Given the employee table, write a query in the problem2.sql file to retrieve all the records
      * from the employee table that have a salary greater than $75000
      *
@@ -93,28 +69,3 @@ public class FilterRecords {
      *   |3     |'Steve'         |'Jones'        |99890.99  |
      *   |4     |'Brandon'       |'Smith'        |120000.00 |
      *   |5     |'Adam'          |'Jones'        |55050.50  |
-     */
-    public List<User> problem2(){
-
-        String sql = FileUtil.parseSQLFile("problem2.sql");
-
-
-        List<User> users = new ArrayList<>();
-        try {
-            Connection connection = ConnectionUtil.getConnection();
-            Statement s = connection.createStatement();
-            ResultSet rs =s.executeQuery(sql);
-
-            while(rs.next()){
-                users.add(new User(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getDouble(4)));
-            }
-
-        } catch (SQLException e) {
-            System.out.println("problem1: " + e.getMessage() + '\n');
-        }
-
-        return users;
-    }
-
-}
-
