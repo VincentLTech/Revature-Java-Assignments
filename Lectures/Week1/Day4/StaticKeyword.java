@@ -8,7 +8,10 @@ public class StaticKeyword {
         System.out.println(Class.global_var); // should print: new value
     }
 }
-class Test{
+class Class {
+    static String global_var = "this variable is static";
+}
+class Static1{
   // static method
   static void m1(){
     System.out.println("from m1");
@@ -17,6 +20,18 @@ class Test{
     m1();
   }
 }
-class Class {
-    static String global_var = "this variable is static";
+class Static2{
+    // static variable
+    static int a = 10;
+    static int b;
+    // static block
+    static {
+        System.out.println("Static block initialized.");
+        b = a * 4;
+    }
+    public static void main(String[] args){
+       System.out.println("from main");
+       System.out.println("Value of a : "+a);
+       System.out.println("Value of b : "+b);
+    }
 }
