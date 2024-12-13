@@ -1,20 +1,16 @@
 public class Casting {
     public static void main(String[] args) {
         long a = 10393L;
-        int i = (int)a;
+        int i = (int)a;//i is now 10393
         System.out.println(i); // Outputs: 10393
-
-
-        //initial values
-        int j = 200;
         //cast to a short
-        short s = (short) j;
+        short s = (short) i;
         System.out.println(s); //output of s will b 200
         //cast to a double
-        double d = (double) j;
+        double d = (double) i;
         System.out.println(d); //output is 200.0
         //cast to a byte
-        byte b = (byte)j;
+        byte b = (byte)i;
         System.out.println(b);
 
     }
@@ -47,4 +43,12 @@ class ExplicitCasting2 {
           // we can explicitly cast these values, but we lose .23
           // i holds the value 10
     }  
+}
+class Test{
+    public static void main(String[] args) {
+        String s = "5";
+        System.out.println(Integer.parseInt(s)+5);
+        int i= 5;
+        System.out.println(String.valueOf(i)+5);
+    }
 }
