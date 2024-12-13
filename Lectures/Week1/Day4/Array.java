@@ -3,6 +3,7 @@ public class Array {
     public static void main(String[] args){
         // Array of integers
         int[] arr = new int[5];
+
         System.out.println("arr size: " + arr.length);
         int[] numbers = {0,1,2,3,4};
         System.out.println("numbers size: " +numbers.length);
