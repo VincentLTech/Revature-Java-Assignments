@@ -9,7 +9,7 @@ public class EntitiesofJava{
         return a + b;
     }
     public static void main(String[] args) {
-        MethodParameters mp = new MethodParameters();
+        EntitiesofJava mp = new EntitiesofJava();
         String str = mp.copy("hello");
         System.out.println(str);
         String str2 = mp.copy("hello2");
@@ -25,10 +25,8 @@ public class EntitiesofJava{
         System.out.println(dogBarking);
     }
 }
-
-class Dog {
+class Dog{
     int age;
-  
     String bark() {
       return "WOOF!";
     }

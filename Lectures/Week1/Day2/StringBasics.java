@@ -1,5 +1,15 @@
 public class StringBasics {
     public static void main(String[] args) {
+        //concat()
+        //equals()
+        // .toUpperCase()
+        // .toLowerCase()
+        //charAt(2)
+        //equalsIgnoreCase()
+        // .length()
+        // .replace('*', ' ')
+        // trim()
+        // indexOff(character)
         String str1 = "my string";
         str1.concat(" is the best!");
         System.out.println(str1);//still prints "my string"
@@ -57,14 +67,13 @@ public class StringBasics {
         String newStrTrim = str11.trim(); // value in the variable "newStr" will be "Revature"
         System.out.println("Trimmed string: " + newStrTrim); //Revature
 
-        char character = 'v';
         String s1 = "potatoes";
         String s2 =  "vanilla";
-        String s3 =  "invite";
-        System.out.println(s1.indexOf(character)); // will return -1 because 'v' is not in the string "potatoes"
-        System.out.println(s2.indexOf(character)); // will return 0
-        System.out.println(s3.indexOf(character)); // will return 2
-
+        String s3 =  "invitev";
+        System.out.println(s1.indexOf('v')); // will return -1 because 'v' is not in the string "potatoes"
+        System.out.println(s2.indexOf('v')); // will return 0
+        System.out.println(s3.indexOf('v')); // will return 2
+        // System.out.println(s3.indexOf('in')); // it only takes characters
         //When we use the '+' operator between a String and a number, Java will concatenate the String with the number.
         System.out.println("The sum of x and y is " + 2 + 4); // The sum of x and y is 24
 

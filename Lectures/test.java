@@ -51,3 +51,20 @@ class TestClass {
 		ot.m1(1.0);
 	}
 }
+
+
+
+
+class assessment{
+	public static void main(String[] args) {
+		int end=30;
+		int i = 0;
+		for(int j=0; j<end; j++) {
+			if(end%15==0){
+				i++;
+			}
+		}
+		System.out.println(i);
+	}
+}
+
