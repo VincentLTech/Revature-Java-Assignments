@@ -24,4 +24,14 @@ public class RemoveAllCharacters {
         }
         return temp;
     }
+    public String removeAll2(String str, String ch){
+        String newone = "";
+        char c = ch.charAt(0);
+        for(int i = 0;  i < str.length(); i++){
+            if(c!=str.charAt(i)){
+                newone = newone+""+str.charAt(i);
+            }
+        }
+        return newone;
+    }
 }

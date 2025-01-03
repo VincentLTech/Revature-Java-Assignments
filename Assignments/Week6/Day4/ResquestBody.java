@@ -2,13 +2,7 @@
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.javalin.Javalin;
 
-
-/**
- * Background: A json string representing a song will be sent in this POST request with the following fields: 
- *      songName, artistName
- */
-public class JavalinSingleton {
-
+public class ResquestBody {
     public static Javalin getInstance(){
         Javalin app = Javalin.create();
         ObjectMapper om = new ObjectMapper();
@@ -19,6 +13,11 @@ public class JavalinSingleton {
          * 
          * Note: Please refer to the "RequestBody.MD" file for more assistance.
          */
+        // app.post("/echo", ctx -> {
+            
+        //     //implement logic here
+                
+        // });
         app.post("/echo", ctx -> {
             //retrieve the json string from the request body
             String jsonString = ctx.body();
@@ -40,6 +39,11 @@ public class JavalinSingleton {
          * 
          * Note: Please refer to the "RequestBody.MD" file for more assistance.
          */
+        // app.post("/changeartisttobeatles", ctx -> {
+
+        //     //implement logic here
+               
+        // });
         app.post("/changeartisttobeatles", ctx -> {
             String jsonString = ctx.body();
             Song song = om.readValue(jsonString, Song.class);
@@ -54,5 +58,4 @@ public class JavalinSingleton {
 
         return app;
     }
-    
 }

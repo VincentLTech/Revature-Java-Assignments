@@ -25,3 +25,19 @@ public class assessment {
     }
     
 }
+class Example {
+    int x = 1;
+
+    public int generateNumber() {
+        return 3;
+    }
+    public Example() {
+        int y = generateNumber();
+        this.x = y;
+    }
+
+    public static void main(String[] args) {
+    Example e = new Example();
+    System.out.println(e.x);
+    }
+}
