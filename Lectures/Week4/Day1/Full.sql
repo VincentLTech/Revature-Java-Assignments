@@ -8,7 +8,7 @@ USE fruits_and_veggies;
 CREATE TABLE IF NOT EXISTS produce ( 
     id INT AUTO_INCREMENT PRIMARY KEY, 
     name VARCHAR(20) NOT NULL UNIQUE, 
-    price DECIMAL(3,2), 
+    price D/ECIMAL(3,2), 
     type VARCHAR(10) NOT NULL
 );
 
@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS produce (
 DROP TABLE produce;
 
 -- How to TRUNCATE TABLE(delete the rows/contents of the table)
-TRUNCATE TABLE fproduce;
+TRUNCATE TABLE produce;
 
 -- How to INSERT into the TABLE with contents.
 INSERT INTO produce (name, price, type) 
@@ -71,3 +71,30 @@ WHERE type LIKE '_____';
 -- How to use BETWEEN 
 SELECT name FROM produce 
 WHERE price BETWEEN 0.50 and 1.00;
+
+-- BETWEEN works with letters
+SELECT name FROM produce 
+WHERE name BETWEEN 'o' AND 'y';
+
+-- How to use GROUP BY
+SELECT type, AVG(price) 
+FROM produce GROUP BY type; -- groups all fruit with the same type returns the avg price of each fruit type
+
+-- SELECT name, price, type FROM produce ORDER BY name ASC;
+SELECT name FROM produce 
+ORDER BY name ASC;
+
+--  ORDER BY DESCENDING DESC
+SELECT name FROM produce 
+ORDER BY name DESC;
+
+-- Select the first 5 produce records after ordering alphabetically.
+SELECT name FROM produce 
+ORDER BY name ASC LIMIT 5;
+
+-- Select the second 5 produce records after ordering alphabetically using OFFSET
+SELECT name FROM produce 
+ORDER BY name ASC LIMIT 5 OFFSET 5;
+
+-- How to ALTER the TABLE so that 
+ALTER TABLE produce ADD pounds INT;
