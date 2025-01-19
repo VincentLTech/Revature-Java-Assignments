@@ -68,3 +68,37 @@ class assessment{
 	}
 }
 
+class assessment2{
+	public static void main(String[] args) {
+		int end=30;
+		int i = 0;
+		for(int j=0; j<end; j++) {
+			if(end%15==0){
+				i++;
+			}
+		}
+		System.out.println(i);
+	}
+}
+
+class UniqueChecker {
+    public static int isUnique(int[] array) {
+		int count= 0;
+        for (int i = 0; i < array.length; i++) {
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[i] == array[j]) {
+                    count++; // Found a duplicate
+                }
+            }
+        }
+        return count; // No duplicates found
+    }
+
+    public static void main(String[] args) {
+        int[] list1 = {3, 8, 12, 2, 9, 17, 43, -8, 46, 203, 14, 97, 10, 4};
+        int[] list2 = {4,4,5,5,5};
+
+        System.out.println(isUnique(list1)); // Output: true
+        System.out.println(isUnique(list2)); // Output: false
+    }
+}
