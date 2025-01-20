@@ -1,3 +1,5 @@
+package Lectures;
+
 public class test {
     
 }
