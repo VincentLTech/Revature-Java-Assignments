@@ -26,5 +26,4 @@ public class PrimitiveValues {
         System.out.println(l);
         System.out.println(d);
     }
-    
 }

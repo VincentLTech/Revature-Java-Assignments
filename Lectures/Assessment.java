@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class Assessment {
@@ -31,5 +32,39 @@ class NonRepeatingElement {
         int[] arr = {1, 2, 3, 2, 1, 4, 3};
         int nonRepeating = findNonRepeatingElement(arr);
         System.out.println("Non-repeating element: " + nonRepeating);
+    }
+}
+
+class AnagramChecker {
+
+    public static boolean isAnagram(String str1, String str2) {
+        // Remove whitespace and convert to lowercase for case-insensitive comparison
+        str1 = str1.replaceAll("\\s", "").toLowerCase();
+        str2 = str2.replaceAll("\\s", "").toLowerCase();
+
+        // Check if the lengths are different, they cannot be anagrams
+        if (str1.length() != str2.length()) {
+            return false;
+        }
+
+        // Convert strings to char arrays and sort them
+        char[] charArray1 = str1.toCharArray();
+        char[] charArray2 = str2.toCharArray();
+        Arrays.sort(charArray1);
+        Arrays.sort(charArray2);
+
+        // Compare the sorted arrays
+        return Arrays.equals(charArray1, charArray2);
+    }
+
+    public static void main(String[] args) {
+        String string1 = "Hello";
+        String string2 = "olleh";
+
+        if (isAnagram(string1, string2)) {
+            System.out.println("The strings are anagrams.");
+        } else {
+            System.out.println("The strings are not anagrams.");
+        }
     }
 }

@@ -32,3 +32,50 @@ class NonRepeatingElement {
         System.out.println("Non-repeating element: " + nonRepeating);
     }
 }
+
+class LargestSum{
+    public static void main(String[] args) {
+        
+        int fire = -10000;
+        int [] nums = {1,2,3,4,5,6};
+        for(int i = 0; i<=nums.length; i++){
+            for(int j= i+1; j<=nums.length; j++){
+
+                if(nums[i]+nums[j]>fire){
+                    fire = nums[i]+nums[j];
+                }
+            }
+        }
+        System.out.println(fire);
+    }
+}
+
+class Example {
+    public void doStuff() {
+        System.out.println("hello"); 
+    }
+    public void doStuff(int x) { 
+        System.out.println(x); 
+    }
+}
+
+class Example2 {
+    public String name;
+    public Example2(String s) {
+        this.name = s;
+    }
+}
+class Car implements Driveable {
+    public void drive() {
+        System.out.println("driving the car...");
+    }
+}
+
+bean id="orderServ"
+class="com.revature.services.OrderServiceImpl"
+&gt; &lt;property
+name="orderDao"
+ref="orderDao"
+/&gt;
+&lt;
+/bean&gt;
