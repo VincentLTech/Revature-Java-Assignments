@@ -192,3 +192,28 @@ PartyGuests.GuestName,
 PartyAttendees.AttendeeName  
 FROM PartyGuests FULL OUTER JOIN PartyAttendees 
 ON PartyGuests.GuestID = PartyAttendees.AttendeeID;
+
+
+
+-- How to create a function in SQL?
+DELIMITER //
+
+CREATE FUNCTION get_balance(acc_no INT) 
+RETURNS INT 
+   BEGIN
+      SELECT order_total 
+      INTO acc_bal 
+      FROM orders 
+      WHERE customer_id = acc_no; 
+      RETURN(acc_bal); 
+   END;
+
+DELIMITER ;
+
+-- How to activate a function in SQL?
+SELECT get_balance(101);
+
+-- How to delete a function in SQL?
+DROP FUNCTION [ IF EXISTS ] function_name;
+DROP FUNCTION IF EXISTS get_balance;
+
